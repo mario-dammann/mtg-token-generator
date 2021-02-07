@@ -1,6 +1,6 @@
 # Custom MTG token generator
 
-This generator lets you generate custom tokens for Magic: The Gathering. You can define all necessary token parameters (e.g. name, power/toughness, image, text) and print it on a sheet (DIN A4) via the browser of your choice.
+This generator lets you generate custom tokens for Magic: The Gathering. You can define all necessary token parameters (e.g. name, power/toughness, image, text) and print it on a sheet (DIN A4) via the browser of your choice. Check the [demo](http://mariodammann.de/projects/mtg-token-generator/).
 
 ## Getting Started
 
@@ -49,5 +49,5 @@ These instructions will get you a copy of the project up and running on your loc
 1. Open file **scss/_variables.scss**
 2. Adjust the variables to your liking
 
-## Copyright for example images
+## Copyright of example images
 [@anniedoesntknow](https://www.instagram.com/anniedoesntknow/)
