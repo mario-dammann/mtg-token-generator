@@ -1,0 +1,61 @@
+.controls {
+  font-family: "Verdana";
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+
+  @media print {
+    display: none;
+	}
+}
+
+.field {
+  & + & {
+    margin-left: 10px;
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  input, select, button {
+    display: inline-block;
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 0;
+    appearance: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+
+    &:focus {
+      outline-color: #1b7cd0;
+    }
+  }
+
+  select {
+    appearance: auto;
+    padding: 5px 6px;
+  }
+
+  input[type=number]{
+    width: 4em;
+    text-align: right;
+  }
+
+  button {
+    padding: 6px 12px;
+    border: 1px solid darken(#1b7cd0, 20%);
+    background-color: #1b7cd0;
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#1b7cd0, 10%);
+    }
+
+    &:focus {
+      outline-color: darken(#1b7cd0, 20%);
+    }
+  }
+}

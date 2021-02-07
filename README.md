@@ -48,3 +48,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Open file **scss/_variables.scss**
 2. Adjust the variables to your liking
+
+## Copyright for example images
+[@anniedoesntknow](https://www.instagram.com/anniedoesntknow/)

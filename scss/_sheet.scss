@@ -1,0 +1,114 @@
+.sheet {
+  font-family: #{$token-font-family};
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(63mm, 63mm));
+
+	@media screen {
+    grid-gap: 5mm;
+	}
+
+  @media print {
+    grid-gap: 2mm 0.25mm;
+	}
+}
+
+.token {
+	width: $token-width;
+	height: $token-height;
+	border: 0.5mm solid #ddd;
+	border-radius: $token-border-radius;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+	&-header {
+		color: $token-header-color;
+    background: $token-header-background;
+    border-radius: 100mm;
+    margin: 2mm;
+    padding: 1mm 1mm 1mm 9.5mm;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-color {
+    width: 7.5mm;
+    height: 7.5mm;
+    position: absolute;
+    top: 0;
+    left: -0.3mm;
+  }
+
+  &-name {
+    flex: 1 1 auto;
+    font-size: 4.25mm;
+  }
+
+  &-values {
+    margin-right: 1mm;
+    margin-left: 1mm;
+    font-size: 5mm;
+    letter-spacing: 1mm;
+  }
+
+  &-footer {
+    color: $token-footer-color;
+    background: $token-footer-background;
+    line-height: 1.2;
+    margin: 0 -0.2mm -0.3mm -0.2mm;
+    border-radius: 0 0 $token-border-radius $token-border-radius;
+    padding: 2mm;
+  }
+
+  &-type {
+    font-size: 3.4mm;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  &-text {
+    margin-top: 1.5mm;
+    font-size: 3mm;
+  }
+
+  &:hover {
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      border-radius: $token-border-radius;
+      background-color: rgba(0, 0, 0, 0.75);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath fill='white' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z'/%3E%3C/svg%3E");
+      background-position: center center;
+      background-size: 20% 20%;
+      background-repeat: no-repeat;
+    }
+
+  }
+}
+
+i[data-icon] {
+  height: 4.2mm;
+  width: 4.2mm;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center top;
+  vertical-align: middle;
+
+  @each $icon in $icons {
+    &[data-icon="#{$icon}"] {
+      background-image: url("../icons/#{$icon}.png");
+    }
+  }
+}

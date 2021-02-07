@@ -1,0 +1,38 @@
+var tokens = [
+  {
+    label: `White Cat 1/1 Lifelink`,
+    image : "cat1.png",
+    color: "W",
+    name: `Cat`,
+    values: `1/1`,
+    type: `Token Creature - Cat`,
+    text: `Lifelink`,
+  },
+  {
+    label: `Colorless Artifact Cat`,
+    image : "cat2.png",
+    color: "C",
+    name: `Cat`,
+    values: `1/1`,
+    type: `Token Artifact Creature - Cat`,
+    text: `This creature cannot block. Creatures you control must attack each combat if able.`,
+  },
+  {
+    label: `Red/Green Cat Beast 2/2`,
+    image : "cat3.png",
+    color: "RG",
+    name: `Cat Beast`,
+    values: `2/2`,
+    type: `Token Creature - Cat Beast`,
+    text: `<i data-icon="T"></i>: Add <i data-icon="G"></i>.`,
+  },
+  {
+    label: `Blue Dog 6/6`,
+    image : "dog1.png",
+    color: "U",
+    name: `Dog`,
+    values: `6/6`,
+    type: `Token Creature - Dog`,
+    text: ``,
+  },
+];

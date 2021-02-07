@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="./css/styles.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/tokens.js"></script>
+    <script type="text/javascript" src="./js/token-generator.js"></script>
+</head>
+<body>
+    <div class="controls">
+        <div class="field">
+            <label for="token-select">Token</label>
+            <select id="token-select"></select>
+        </div>
+
+        <div class="field">
+            <label for="token-amount">Amount</label>
+            <input id="token-amount" type="number" value="1" />
+        </div>
+
+        <div class="field">
+            <button id="token-add" type="button">Add</button>
+        </div>
+    </div>
+
+    <div class="sheet"></div>
+</body>
+</html>
