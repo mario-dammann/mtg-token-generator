@@ -41,7 +41,18 @@ These instructions will get you a copy of the project up and running on your loc
 ## Creating your own tokens
 
 1. Open file **js/tokens.js**
-2. Add new token objects to the array and customize them via the supported options
+2. Add new token objects to the array and customize them via the supported properties
+
+| Property         | Value                                                                                           |
+|------------------|-----------------------------------------------------------------------------------------------------|
+| **label**<br>(required) | The label for the token that is used as represention in the select                                  |
+| **image**<br>(required) | The filename of the background-image used for the token (format: **NAME.EXTENSION**)                    |
+| **color**<br>(required) | The color of the token. Use usual letter that is used in MTG for the colors (e.g. "W" for white)    |
+| **name**<br>(required)  | The name of the token. Use normal types (e.g. "Cat Beast") or unique name for legendary tokens      |
+| **values**       | The power and toughness of the token (only if token is a creature)                                  |
+| **type**<br>(required)  | The type of the token (e.g. "Creature - Cat Beast" or "Artifact - Treasure")                        |
+| **text**         | The text box of the token. Add any keyword (e.g. "Reach"), abilities (Tap effects) or other effects.  |
+
 3. Add images to the **images** folder
 
 ## Customizing the layout/design
