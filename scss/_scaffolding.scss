@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=#{$token-minimal-font-family}:wght@#{$token-minimal-font-family-weight}&display=swap" rel="stylesheet');
+
+@page {
+  size: "A4";
+}
+
+.container {
+  @media print {
+    padding: 0;
+    margin: 0;
+	}
+}
+
+.list-numbered {
+  padding-left: 0;
+  list-style-type: none;
+  counter-reset: index;
+  font-size: 1.25rem;
+
+  &__item {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    & + & {
+      margin-top: 1rem;
+    }
+
+    &:before {
+      flex: 0 0 auto;
+      display: inline-block;
+      content: counter(index);
+      background-color: #fff;
+      color: var(--bs-blue);
+      border: 1px solid var(--bs-blue);
+      text-align: center;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      height: 3rem;
+      width: 3rem;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  vertical-align: middle;
+}
+
+.offcanvas {
+  &-start {
+    width: 600px;
+    border-right: 0 none;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    visibility: visible;
+  }
+
+  &-body {
+    padding: 1rem 0;
+  }
+}
+
+.accordion-button {
+  font-weight: 500;
+}
